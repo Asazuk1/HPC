@@ -1,8 +1,12 @@
-# <center>lab2 实验报告</center> 
-<center>课程名 <u>高性能计算应用实践</u></center>  
-<center>学期 <u>2024年秋季学期</u></center>  
-<center>姓名 <u>陈卫喆</u></center>  
-<center>学号 <u>2023311F13</u></center>  
+<div style =  'text-align: center;'>
+
+# lab2 实验报告 
+课程名 <u>高性能计算应用实践</u> <br>
+学期 <u>2024年秋季学期</u> <br>
+姓名 <u>陈卫喆</u> <br>
+学号 <u>2023311F13</u>
+
+</div>  
 
 ## 一. 实验环境
 #### OS版本
