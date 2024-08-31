@@ -1,8 +1,8 @@
 # <center>lab2 实验报告</center> 
-<center>课程名 <u>高性能计算应用实践</u></center>
-<center>学期 <u>2024年秋季学期</u></center>
-<center>姓名 <u>陈卫喆</u></center>
-<center>学号 <u>2023311F13</u></center>
+<center>课程名 <u>高性能计算应用实践</u></center>  
+<center>学期 <u>2024年秋季学期</u></center>  
+<center>姓名 <u>陈卫喆</u></center>  
+<center>学号 <u>2023311F13</u></center>  
 
 ## 一. 实验环境
 #### OS版本
@@ -16,7 +16,7 @@ gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 cpu MHz         : 3187.200  
 ### 物理核数  
 Core(s) per socket:  8  
-Socket(s):$~~~~~~~~~~~~~$ 1
+Socket(s):1
 ### 内存大小
 |     |total  |used  |free   |shared |buff/cache |available|
 |-----|-------|------|-------|-------|-----------|---------|
