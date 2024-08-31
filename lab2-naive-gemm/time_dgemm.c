@@ -8,9 +8,9 @@ void naive_dgemm(int m, int n, int k, double beta,
           double* A, double* B, double* C) {
     for (int i = 0; i < m; i++){    //C[i] 
         for (int j = 0; j < n; j++){  //C[i][j]
-            C[i*m + j] = beta * C[i*m + j];
+            C[i*n + j] = beta * C[i*n + j];
             for (int p = 0; p < k; p++){  
-                C[i*m + j] += A[i*m + p] * B[p*k + j]; 
+                C[i*n + j] += A[i*k + p] * B[p*n + j]; 
              }
         }
     }
