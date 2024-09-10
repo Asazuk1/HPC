@@ -1,5 +1,5 @@
 OLD  := openblas_MMult
-NEW  := My_MMult
+NEW  := naive_MMult
 
 
 CC         := gcc
@@ -8,10 +8,10 @@ LINKER     := $(CC)
 CFLAGS     := -Wall -Werror -Wno-unused-result -Wno-unused-value -Wno-unused-variable -g
 LDFLAGS    := -lm
 
-# added
 CFLAGS += -I/path/to/openblas/include
 LDFLAGS += -L/path/to/openblas/lib -lopenblas
-
+CFLAGS += -pthread
+LDFLAGS += -pthread
 
 DATA_DIR = _data
 BUILD_DIR = _build
