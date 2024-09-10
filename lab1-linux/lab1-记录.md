@@ -1,4 +1,4 @@
-1 创建SSH密钥时未更改为正确邮箱导致无法关联github远程仓库
+1 创建SSH密钥时未更改邮箱导致无法关联github远程仓库
 2 使用镜像网站时遇到未知问题显示Error,按顺序输入以下两条命令
 	sudo apt update 
 	sudo apt install -y build-essential vim gdb 
