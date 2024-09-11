@@ -1,5 +1,5 @@
 OLD  := openblas_MMult
-NEW  := naive_MMult
+NEW  := multithread_MMult
 
 
 CC         := gcc
