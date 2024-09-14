@@ -64,8 +64,8 @@ void MY_MMult(int m, int n, int k, double *a, int lda,
      * 表示将矩阵横切为4块, 竖切为2块, 共八块, 对应cpu核数
      */
     pthread_t p[CPU_CORES];
-    int block_row = (int)sqrt(CPU_CORES);  
-    int block_col = CPU_CORES / block_row;  
+    int block_col = (int)sqrt(CPU_CORES);  
+    int block_row = CPU_CORES / block_col;  
 
     int m_gap = m / block_row;
     int n_gap = n / block_col;
@@ -78,7 +78,7 @@ void MY_MMult(int m, int n, int k, double *a, int lda,
     // 创建线程
     for (m_start = 0, m_end = m_gap;
          m_start < m;
-         m_start += m_gap, n_end += n_gap)
+         m_start += m_gap, m_end += m_gap)
     {
         for (n_start = 0, n_end = n_gap;
              n_start < n;
@@ -91,7 +91,7 @@ void MY_MMult(int m, int n, int k, double *a, int lda,
 
     // 运行线程并在结束后回收资源
     for (i = 0; i < CPU_CORES; i++)
-    {
+    { 
         rc = pthread_join(p[i], NULL); assert (rc == 0);
     }
 }

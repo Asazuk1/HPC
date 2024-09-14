@@ -1,6 +1,5 @@
-OLD  := openblas_MMult
-NEW  := multithread_MMult
-
+OLD  := openmp_MMult
+NEW  := openmp_MMult
 
 CC         := gcc
 LINKER     := $(CC) 
@@ -8,10 +7,13 @@ LINKER     := $(CC)
 CFLAGS     := -Wall -Werror -Wno-unused-result -Wno-unused-value -Wno-unused-variable -g
 LDFLAGS    := -lm
 
+# added
 CFLAGS += -I/path/to/openblas/include
 LDFLAGS += -L/path/to/openblas/lib -lopenblas
 CFLAGS += -pthread
 LDFLAGS += -pthread
+CFLAGS += -fopenmp
+LDFLAGS += -fopenmp
 
 DATA_DIR = _data
 BUILD_DIR = _build
@@ -31,7 +33,8 @@ all:
 $(BUILD_DIR)/test_MMult.x: $(OBJS) defs.h
 	$(LINKER) $(OBJS) $(LDFLAGS) -o $@
 
-export OMP_NUM_THREADS=1
+# 设置openmp和goto的线程数
+export OMP_NUM_THREADS=8
 export GOTO_NUM_THREADS=1
 
 run:
